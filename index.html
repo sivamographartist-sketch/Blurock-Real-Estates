@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLUROCK REAL ESTATES | Land Investment Advisors • Developers • Marketing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              800: '#1e3a8a',
+              900: '#0f172a',
+              gold: '#c59d5f',
+              'gold-dark': '#a47e3b',
+              'gold-light': '#dfc28d',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass-nav {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.92);
+    }
+    .gradient-gold-text {
+      background: linear-gradient(135deg, #a47e3b 0%, #c59d5f 50%, #e2c792 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-blue-text {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-pattern {
+      background-image: radial-gradient(rgba(30, 58, 138, 0.08) 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+    }
+    .card-hover-fx {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-fx:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -10px rgba(30, 58, 138, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav border-b border-slate-200/80 shadow-sm" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo Section -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img
+            src="BLUROCK - Logo 03.png"
+            onerror="this.onerror=null; this.src='BLUROCK - Logo.png';"
+            alt="BLUROCK REAL ESTATES Logo"
+            class="h-20 md:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-700 text-sm">
+          <a href="#about" class="hover:text-blue-700 transition-colors">About Us</a>
+          <a href="#approach" class="hover:text-blue-700 transition-colors">Strategic Approach</a>
+          <a href="#services" class="hover:text-blue-700 transition-colors">Expertise</a>
+          <a href="#calculator" class="hover:text-blue-700 transition-colors">ROI Calculator</a>
+          <a href="#corridors" class="hover:text-blue-700 transition-colors">TN Corridors</a>
+          <a href="#location" class="hover:text-blue-700 transition-colors">Our Office</a>
+        </nav>
+
+        <!-- Header CTA Button -->
+        <div class="hidden sm:flex items-center space-x-4">
+          <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 hover:from-blue-800 hover:to-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+            <span>Enquire Now</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger -->
+        <div class="flex md:hidden">
+          <button id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" class="p-2 rounded-lg text-slate-700 hover:text-blue-800 hover:bg-slate-100 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 shadow-xl">
+      <div class="flex flex-col space-y-3 font-medium text-slate-700">
+        <a href="#about" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-blue-700">About Us</a>
+        <a href="#approach" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-blue-700">Strategic Approach</a>
+        <a href="#services" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-blue-700">Expertise</a>
+        <a href="#calculator" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-blue-700">ROI Calculator</a>
+        <a href="#corridors" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-blue-700">TN Corridors</a>
+        <a href="#location" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-blue-700">Our Office</a>
+        <a href="#contact" class="mobile-nav-link mt-2 text-center bg-blue-800 text-white font-semibold py-2.5 rounded-lg shadow">
+          Enquire Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-pattern overflow-hidden border-b border-slate-200">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-24 right-0 w-96 h-96 bg-blue-100/60 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 -left-20 w-80 h-80 bg-amber-50/80 rounded-full blur-2xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs md:text-sm font-semibold tracking-wider uppercase">
+            <i class="fa-solid fa-compass-drafting text-brand-gold"></i>
+            Land Investment Advisors • Developers • Marketing
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Next-Generation <br class="hidden sm:inline" />
+            <span class="gradient-blue-text">Land Investment</span> & <br />
+            <span class="text-slate-900">Integrated Townships.</span>
+          </h1>
+
+          <p class="text-lg md:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            BLUROCK is creating and marketing high-potential land projects and concept-based integrated townships across <strong class="text-slate-900 font-semibold">Tamil Nadu</strong>.
+          </p>
+
+          <!-- Core Motto Badges -->
+          <div class="pt-2 flex flex-wrap justify-center lg:justify-start items-center gap-4 text-xs sm:text-sm font-bold tracking-widest text-slate-800">
+            <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-700"></span> DISCOVER
+            </span>
+            <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-gold"></span> INVEST
+            </span>
+            <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span> GROW
+            </span>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#contact" class="w-full sm:w-auto text-center px-8 py-3.5 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-semibold shadow-lg shadow-blue-900/20 hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Book Land Advisory</span>
+            </a>
+            <a href="#approach" class="w-full sm:w-auto text-center px-8 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold shadow-sm transition-all duration-200 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-arrow-trend-up text-brand-gold"></i>
+              <span>Explore Strategy</span>
+            </a>
+          </div>
+
+          <!-- Trust metrics snippet -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200 max-w-xl mx-auto lg:mx-0">
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-blue-900">100%</p>
+              <p class="text-xs text-slate-500 font-medium uppercase mt-0.5">Clear Title Diligence</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-brand-gold">360°</p>
+              <p class="text-xs text-slate-500 font-medium uppercase mt-0.5">End-to-End Execution</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-blue-800">TN-Wide</p>
+              <p class="text-xs text-slate-500 font-medium uppercase mt-0.5">Growth Corridors</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100">
+            <div class="absolute -top-3 -right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow">
+              Prime Portfolio
+            </div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-gem"></i>
+                </div>
+                <div>
+                  <h2 class="font-bold text-slate-900 text-sm">Strategic Advisory</h2>
+                  <p class="text-xs text-slate-500">Tamil Nadu Growth Belts</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                Active Projects
+              </span>
+            </div>
+
+            <div class="py-5 space-y-4">
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <i class="fa-solid fa-chart-line text-blue-700 mt-1 text-base"></i>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900">Location Intelligence</h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Macro-economic zoning, upcoming expressways & industrial clusters.</p>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <i class="fa-solid fa-city text-brand-gold mt-1 text-base"></i>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900">Concept Integrated Townships</h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Master-planned destinations with signature sustainable infrastructure.</p>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                <i class="fa-solid fa-bullhorn text-blue-700 mt-1 text-base"></i>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900">360° Real Estate Marketing</h3>
+                  <p class="text-xs text-slate-600 mt-0.5">High-velocity go-to-market strategies for landowners & investors.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="#calculator" class="w-full block text-center py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-lg transition">
+                Calculate Projected Land Valuation →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">About BLUROCK</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          Vision, Strategy and Execution Under One Roof
+        </h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          From land investment opportunities to our own developments and signature township concepts, BLUROCK brings together vision, strategy and execution.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Pillar 1 -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 card-hover-fx relative overflow-hidden">
+          <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-900 flex items-center justify-center text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-magnifying-glass-location"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">DISCOVER</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Uncovering high-potential, legally spotless land parcels across rising transit corridors and planned growth sectors in Tamil Nadu through data-backed location intelligence.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-600"></i> Legal & Title Due Diligence</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-600"></i> Land Banking & Aggregation</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 card-hover-fx relative overflow-hidden">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-brand-gold-dark flex items-center justify-center text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">INVEST</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Structuring secure, high-yield land investment opportunities tailored for retail buyers, institutional investors, and family offices seeking capital appreciation.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-gold-dark"></i> Capital Growth Advisory</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-gold-dark"></i> Strategic Risk Mitigation</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 card-hover-fx relative overflow-hidden">
+          <div class="w-14 h-14 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">GROW</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Executing premium infrastructure development and 360° project marketing that transforms raw acreage into vibrant, high-value integrated destinations.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400"></i> Turnkey Masterplanning</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400"></i> 360° Omnichannel Marketing</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="approach" class="py-20 bg-slate-900 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-3xl mb-16">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Our Methodology</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 text-white">
+          Our Multi-Faceted Strategic Approach
+        </h2>
+        <div class="w-16 h-1 bg-brand-gold my-4 rounded-full"></div>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Our approach combines strategic land acquisition, location intelligence, project conceptualisation, premium infrastructure, investment advisory, technology and 360° marketing to create distinctive destinations and long-term value.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Step 1 -->
+        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
+          <div class="text-brand-gold text-2xl font-black mb-3">01</div>
+          <h3 class="text-lg font-bold text-white mb-2">Strategic Land Acquisition</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Targeting parcels aligned with proposed government infrastructure, industrial corridors, and orbital highway expansions.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
+          <div class="text-brand-gold text-2xl font-black mb-3">02</div>
+          <h3 class="text-lg font-bold text-white mb-2">Location Intelligence</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Leveraging spatial analytics, demographic migration trends, and zoning forecasts to select lands with exponential appreciation velocity.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
+          <div class="text-brand-gold text-2xl font-black mb-3">03</div>
+          <h3 class="text-lg font-bold text-white mb-2">Project Conceptualisation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Crafting signature township themes, wellness-centric living layouts, and integrated commercial ecosystems.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
+          <div class="text-brand-gold text-2xl font-black mb-3">04</div>
+          <h3 class="text-lg font-bold text-white mb-2">Premium Infrastructure</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Blacktop wide arterial roads, underground drainage, landscaped avenues, smart utilities, and grand entrance gateways.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
+          <div class="text-brand-gold text-2xl font-black mb-3">05</div>
+          <h3 class="text-lg font-bold text-white mb-2">Investment Advisory</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Empowering clients with tax-efficient, high-margin portfolio allocation models and strategic exit roadmaps.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
+          <div class="text-brand-gold text-2xl font-black mb-3">06</div>
+          <h3 class="text-lg font-bold text-white mb-2">Technology & 360° Marketing</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Virtual drone walkthroughs, digital transaction dashboards, and multi-channel campaign architectures for rapid liquidity.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-blue-800 uppercase">Core Business Verticals</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          Comprehensive Real Estate Solutions
+        </h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+        <p class="text-slate-600 text-base">
+          Delivering end-to-end expertise across the complete lifecycle of land development and commercialization.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Service Card 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 card-hover-fx flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Land Investment Advisors</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Assisting HNIs, NRI investors, and institutional buyers in acquiring prime, titled land bank opportunities with maximum appreciation yield across Tamil Nadu.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Legal Verification & Clear Titles</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Corridor Yield Forecasting</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Portfolio Diversification</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a href="#contact" class="text-blue-800 font-semibold text-xs flex items-center gap-1.5 hover:underline">
+              Request Advisory Call <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 card-hover-fx flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-gold-dark flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-helmet-safety"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Developers & Townships</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Transforming virgin lands into concept-based integrated gated communities featuring world-class amenities, sustainable water systems, and DTCP/RERA approvals.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold-dark"></i> Concept Masterplanning</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold-dark"></i> Turnkey Infrastructure Delivery</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold-dark"></i> Regulatory & Approvals Management</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a href="#contact" class="text-brand-gold-dark font-semibold text-xs flex items-center gap-1.5 hover:underline">
+              Explore Township Concepts <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 card-hover-fx flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">360° Real Estate Marketing</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Full-funnel marketing mandates for land owners and developers: combining hyper-targeted digital channels, experiential on-ground events, and dedicated sales engines.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Digital Lead Generation Engines</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Experiential Site Sales Lounges</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Fast Turnaround Mandates</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a href="#contact" class="text-blue-800 font-semibold text-xs flex items-center gap-1.5 hover:underline">
+              Partner With Marketing Team <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="calculator" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Growth Simulator</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">
+          Estimate Your Land Investment Appreciation
+        </h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Model projected returns across high-potential growth corridors in Tamil Nadu based on conservative historical trends.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+          <!-- Controls -->
+          <div class="lg:col-span-7 space-y-6">
+
+            <!-- Investment Amount / Plot Size -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="investmentInput" class="text-sm font-semibold text-slate-300">Initial Investment (₹)</label>
+                <span id="investmentDisplay" class="text-base font-bold text-amber-400">₹ 25,00,000</span>
+              </div>
+              <input
+                id="investmentInput"
+                type="range"
+                min="500000"
+                max="20000000"
+                step="250000"
+                value="2500000"
+                class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-400"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>₹ 5 Lakhs</span>
+                <span>₹ 1 Crore</span>
+                <span>₹ 2 Crores</span>
+              </div>
+            </div>
+
+            <!-- Holding Period -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="periodInput" class="text-sm font-semibold text-slate-300">Investment Horizon (Years)</label>
+                <span id="periodDisplay" class="text-base font-bold text-amber-400">5 Years</span>
+              </div>
+              <input
+                id="periodInput"
+                type="range"
+                min="2"
+                max="12"
+                step="1"
+                value="5"
+                class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-400"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>2 Years</span>
+                <span>5 Years</span>
+                <span>12 Years</span>
+              </div>
+            </div>
+
+            <!-- Corridor Select & Annual CAGR -->
+            <div>
+              <label for="corridorSelect" class="block text-sm font-semibold text-slate-300 mb-2">Target Corridor (Tamil Nadu)</label>
+              <select id="corridorSelect" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-400">
+                <option value="15.5">Chennai Peripheral Ring Road Corridor (Est. 15.5% CAGR)</option>
+                <option value="14.0">Sriperumbudur - Oragadam Industrial Belt (Est. 14.0% CAGR)</option>
+                <option value="13.5">GST Road & Chengalpattu Expansion (Est. 13.5% CAGR)</option>
+                <option value="16.0">Coimbatore Smart City & Outer Belts (Est. 16.0% CAGR)</option>
+                <option value="12.5">ECR Coastal Lifestyle Corridor (Est. 12.5% CAGR)</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Calculated Output Card -->
+          <div class="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 text-center space-y-5">
+            <span class="text-xs uppercase tracking-widest text-slate-300 font-semibold">Estimated Projected Value</span>
+
+            <div>
+              <div id="projectedValDisplay" class="text-3xl sm:text-4xl font-extrabold text-amber-400">
+                ₹ 51,38,450
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Compound Annual Growth Calculation</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 pt-3 border-t border-white/10 text-left">
+              <div>
+                <p class="text-[11px] text-slate-400">Net Estimated Profit</p>
+                <p id="profitDisplay" class="text-base font-bold text-emerald-400">+ ₹ 26,38,450</p>
+              </div>
+              <div>
+                <p class="text-[11px] text-slate-400">Overall Growth</p>
+                <p id="growthMultiplier" class="text-base font-bold text-white">2.05x Return</p>
+              </div>
+            </div>
+
+            <p class="text-[10px] text-slate-400 italic">
+              *Estimates are illustrative based on corridor historical patterns. Connect with our advisors for verified project financials.
+            </p>
+
+            <a href="#contact" class="block w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-xs transition duration-200">
+              Get Personalized Investment Dossier
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="corridors" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-blue-800 uppercase">Geographic Footprint</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          High-Growth Corridors Across Tamil Nadu
+        </h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+        <p class="text-slate-600 text-base">
+          Strategically positioning investors where upcoming infrastructure and commercial investments trigger explosive land appreciation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover-fx">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-900 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-road"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">Peripheral Ring Road</h3>
+              <p class="text-xs text-blue-600 font-medium">Chennai Expansion</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Connecting Ennore Port to Mahabalipuram, triggering exponential industrial and residential land banking interest.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover-fx">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-amber-100 text-brand-gold-dark flex items-center justify-center font-bold">
+              <i class="fa-solid fa-industry"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">Sriperumbudur Hub</h3>
+              <p class="text-xs text-amber-700 font-medium">Manufacturing Belt</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Global EV manufacturing and electronic hardware corridors commanding continuous rental demand and plotted developments.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover-fx">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-900 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-train-subway"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">GST - Chengalpattu</h3>
+              <p class="text-xs text-blue-600 font-medium">Transit-Oriented Growth</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Supported by Kilambakkam Bus Terminus & suburban rail link; a thriving ecosystem for master-planned gated townships.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover-fx">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-tree-city"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">Coimbatore Belts</h3>
+              <p class="text-xs text-emerald-700 font-medium">Western Gateway</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            High tech-corridor absorption, pleasant climate, and expanding airport infrastructure driving plotted villas and townships.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="location" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Visit Our Headquarters</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          Strategically Headquartered in Chennai
+        </h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+        <p class="text-slate-600 text-base">
+          Our headquarters in Saligramam, Chennai anchors our operations across Tamil Nadu. Walk in to explore exclusive land advisory and conceptual townships.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+
+        <!-- Address & Contact Info Box -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl">
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/80 text-blue-200 text-xs font-semibold uppercase">
+              <i class="fa-solid fa-building"></i> Corporate Address
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-white">BLUROCK REAL ESTATES</h3>
+              <p class="text-brand-gold text-xs font-semibold tracking-wider uppercase mt-1">Highpowerv Towers</p>
+            </div>
+
+            <div class="space-y-4 text-sm text-slate-300">
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-location-dot text-brand-gold mt-1 text-base"></i>
+                <p>
+                  Highpowerv Towers, 61, 5th Cross St,<br />
+                  Logaiah Colony, Saligramam,<br />
+                  Chennai, Tamil Nadu 600092
+                </p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i class="fa-solid fa-clock text-brand-gold text-base"></i>
+                <p>Monday - Saturday: 9:30 AM - 6:30 PM</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i class="fa-solid fa-phone text-brand-gold text-base"></i>
+                <p>+91 (044) 4554 2000 / +91 93829 99999</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i class="fa-solid fa-envelope text-brand-gold text-base"></i>
+                <p>advisory@blurockrealestates.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8 border-t border-slate-800">
+            <a
+              href="https://maps.google.com/?q=Highpowerv+Group+of+Companies,+61,+5th+Cross+St,+Logaiah+Colony,+Saligramam,+Chennai,+Tamil+Nadu+600092"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-800 hover:bg-blue-700 text-white text-xs font-bold transition shadow-md"
+            >
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              Get Directions via Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Map Embed Column -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100 min-h-[420px]">
+          <div class="w-full h-full relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3886.7466871302786!2d80.19686831096001!3d13.051789487217903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d13.0516878!2d80.1996317!4m5!1s0x3a5267fc3709f43d%3A0x6af0c0b166fe0422!2sHighpowerv%20Group%20of%20Companies%2C%20Highpowerv%20Towers%2C%2061%2C%205th%20Cross%20St%2C%20Logaiah%20Colony%2C%20Saligramam%2C%20Chennai%2C%20Tamil%20Nadu%20600092!3m2!1d13.051925899999999!2d80.19958299999999!5e0!3m2!1sen!2sin!4v1789455446903!5m2!1sen!2sin"
+              class="w-full h-full min-h-[420px]"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-slate-200">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Begin Your Journey</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Connect with BLUROCK Advisors</h2>
+          <p class="text-slate-600 text-sm mt-2">
+            Whether you are looking to acquire prime parcels, invest in concept townships, or market an existing land asset.
+          </p>
+        </div>
+
+        <form id="contactForm" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="clientName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name *</label>
+              <input
+                type="text"
+                id="clientName"
+                required
+                placeholder="e.g. Anand Kumar"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100 transition"
+              />
+            </div>
+            <div>
+              <label for="clientPhone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number *</label>
+              <input
+                type="tel"
+                id="clientPhone"
+                required
+                placeholder="+91 98400 XXXXX"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100 transition"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="clientEmail" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address *</label>
+              <input
+                type="email"
+                id="clientEmail"
+                required
+                placeholder="name@domain.com"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100 transition"
+              />
+            </div>
+            <div>
+              <label for="interestCategory" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Area of Interest *</label>
+              <select
+                id="interestCategory"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100 transition bg-white"
+              >
+                <option value="Land Investment Advisory">Land Investment Advisory</option>
+                <option value="Concept Integrated Townships">Concept Integrated Townships</option>
+                <option value="Joint Development / Development Services">Joint Development Partnership</option>
+                <option value="360° Real Estate Marketing Mandates">360° Real Estate Marketing Mandates</option>
+                <option value="Land Banking / Large Acreage">Land Banking / Institutional Acreage</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="clientMessage" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Project Requirements / Query</label>
+            <textarea
+              id="clientMessage"
+              rows="4"
+              placeholder="Tell us about your preferred location, ticket size, or specific development requirements..."
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100 transition"
+            ></textarea>
+          </div>
+
+          <!-- Notification status box -->
+          <div id="formStatus" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full py-4 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-bold text-sm tracking-wider uppercase transition shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2"
+          >
+            <span>Submit Advisory Request</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-400 text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        <!-- Brand Summary -->
+        <div class="md:col-span-2 space-y-4">
+		
+          <!<img
+            src="BLUROCK - Logo 03"
+            onerror="this.onerror=null; this.src='BLUROCK - Logo 03';"
+            alt="BLUROCK REAL ESTATES Logo"
+            class="h-12 w-auto bg-white/95 p-1 rounded-lg"
+          />
+          <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+            BLUROCK is a next-generation land investment, development and marketing company, creating and marketing high-potential land projects and concept-based integrated townships across Tamil Nadu.
+          </p>
+          <div class="flex items-center gap-4 text-slate-400 pt-2">
+            <span class="text-xs tracking-widest uppercase font-bold text-brand-gold">DISCOVER. INVEST. GROW.</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#approach" class="hover:text-white transition">Strategic Approach</a></li>
+            <li><a href="#services" class="hover:text-white transition">Core Verticals</a></li>
+            <li><a href="#calculator" class="hover:text-white transition">ROI Calculator</a></li>
+            <li><a href="#corridors" class="hover:text-white transition">Tamil Nadu Corridors</a></li>
+            <li><a href="#location" class="hover:text-white transition">Corporate Office</a></li>
+          </ul>
+        </div>
+
+        <!-- Headquarters -->
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Office Details</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Highpowerv Group of Companies<br />
+            Highpowerv Towers, 61, 5th Cross St,<br />
+            Logaiah Colony, Saligramam,<br />
+            Chennai, Tamil Nadu 600092
+          </p>
+          <p class="text-xs text-brand-gold font-semibold pt-1">
+            Tamil Nadu RERA & Legal Compliant
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="currentYear"></span> BLUROCK REAL ESTATES. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 sm:mt-0">
+          <span class="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
+          <span class="hover:text-slate-400 cursor-pointer">Terms of Service</span>
+          <span class="hover:text-slate-400 cursor-pointer">Disclaimer</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set dynamic copyright year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Hamburger Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = !mobileMenu.classList.contains('hidden');
+      if (isExpanded) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-xl';
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.className = 'fa-solid fa-xmark text-xl';
+      }
+    });
+
+    // Close mobile menu on clicking any navigation link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-xl';
+      });
+    });
+
+    // Format currency to Indian Numbering Format
+    function formatINR(amount) {
+      return new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+        maximumFractionDigits: 0
+      }).format(amount);
+    }
+
+    // ROI Simulator Calculation Logic
+    const investmentInput = document.getElementById('investmentInput');
+    const periodInput = document.getElementById('periodInput');
+    const corridorSelect = document.getElementById('corridorSelect');
+
+    const investmentDisplay = document.getElementById('investmentDisplay');
+    const periodDisplay = document.getElementById('periodDisplay');
+    const projectedValDisplay = document.getElementById('projectedValDisplay');
+    const profitDisplay = document.getElementById('profitDisplay');
+    const growthMultiplier = document.getElementById('growthMultiplier');
+
+    function calculateROI() {
+      const principal = parseFloat(investmentInput.value);
+      const years = parseFloat(periodInput.value);
+      const rate = parseFloat(corridorSelect.value) / 100;
+
+      // Compound Interest: A = P(1 + r)^t
+      const futureValue = principal * Math.pow(1 + rate, years);
+      const netProfit = futureValue - principal;
+      const multiplier = (futureValue / principal).toFixed(2);
+
+      investmentDisplay.textContent = formatINR(principal);
+      periodDisplay.textContent = `${years} Years`;
+      projectedValDisplay.textContent = formatINR(Math.round(futureValue));
+      profitDisplay.textContent = `+ ${formatINR(Math.round(netProfit))}`;
+      growthMultiplier.textContent = `${multiplier}x Return`;
+    }
+
+    investmentInput.addEventListener('input', calculateROI);
+    periodInput.addEventListener('input', calculateROI);
+    corridorSelect.addEventListener('change', calculateROI);
+
+    // Initial calculation run
+    calculateROI();
+
+    // Lead Submission Form Handling (without using native alert())
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const category = document.getElementById('interestCategory').value;
+
+      if (!name || !phone || !email) {
+        formStatus.className = 'p-4 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200 block';
+        formStatus.textContent = 'Please fill out all mandatory fields before submitting.';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+      // Simulating response
+      setTimeout(() => {
+        formStatus.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block';
+        formStatus.innerHTML = `<strong>Thank you, ${name}!</strong> Your request for <em>${category}</em> has been received. Our land investment advisor will contact you within 24 hours.`;
+
+        contactForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Submit Advisory Request</span> <i class="fa-solid fa-paper-plane text-xs"></i>';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
